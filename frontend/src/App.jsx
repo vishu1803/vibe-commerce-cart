@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Products from './pages/Products';
-import Cart from './pages/Cart';
-import { cartAPI } from './services/api';
+import Products from './pages/Products.jsx';
+import Cart from './pages/Cart.jsx';
+import { cartAPI } from './services/api.js';
 
 function App() {
   const [cartVersion, setCartVersion] = useState(0);
@@ -96,7 +96,6 @@ function App() {
         <footer className="bg-gray-900 text-white mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* About */}
               <div>
                 <h3 className="text-lg font-bold mb-4">About Vibe Commerce</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
@@ -104,7 +103,6 @@ function App() {
                 </p>
               </div>
 
-              {/* Quick Links */}
               <div>
                 <h3 className="text-lg font-bold mb-4">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
@@ -121,7 +119,6 @@ function App() {
                 </ul>
               </div>
 
-              {/* Contact */}
               <div>
                 <h3 className="text-lg font-bold mb-4">Contact</h3>
                 <p className="text-gray-400 text-sm">
