@@ -1,367 +1,381 @@
 
-# Vibe Commerce - Shopping Cart Application
 
-A full-stack e-commerce shopping cart application built with React, Express, MongoDB, and Tailwind CSS for the Vibe Commerce screening assignment.
+---
+
+# 🛍️ Vibe Commerce - Shopping Cart Application
+
+A full-stack e-commerce shopping cart application built with **React**, **Express**, **MongoDB**, and **Tailwind CSS** for the **Vibe Commerce** screening assignment.
+
+---
 
 ## 🚀 Features
 
-- **Product Catalog**: Browse through a curated collection of products
-- **Shopping Cart**: Add, remove, and update item quantities
-- **Persistent Storage**: Cart data saved in MongoDB
-- **Mock Checkout**: Complete purchase flow with customer information
-- **Order Confirmation**: Receipt modal with order details
-- **Responsive Design**: Fully responsive UI using Tailwind CSS
-- **Real-time Updates**: Live cart count in navigation
-- **Error Handling**: Comprehensive error messages and loading states
+* 🧾 **Product Catalog** — Browse curated products
+* 🛒 **Shopping Cart** — Add, remove, and update quantities
+* 💾 **Persistent Storage** — Cart data saved in MongoDB
+* 💳 **Mock Checkout** — Complete purchase flow with form submission
+* 🧾 **Order Confirmation** — Receipt modal with order details
+* 📱 **Responsive Design** — Fully responsive UI with Tailwind CSS
+* ⚡ **Real-time Updates** — Live cart count in navigation
+* 🛠️ **Error Handling** — Comprehensive messages and loading states
+
+---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **React** 18.2.0 - UI library
-- **React Router DOM** 6.20.0 - Client-side routing
-- **Tailwind CSS** 3.4.0 - Utility-first CSS framework
-- **Axios** 1.6.0 - HTTP client
-- **PostCSS & Autoprefixer** - CSS processing
+
+* **React** 18.2.0 — UI library
+* **React Router DOM** 6.20.0 — Client-side routing
+* **Tailwind CSS** 3.4.1 — Utility-first CSS framework
+* **Axios** 1.6.0 — HTTP client
+* **PostCSS & Autoprefixer** — CSS post-processing
 
 ### Backend
-- **Node.js** - Runtime environment
-- **Express** - Web framework
-- **MongoDB** - NoSQL database
-- **Mongoose** - MongoDB ODM
-- **CORS** - Cross-origin resource sharing
-- **dotenv** - Environment variables
+
+* **Node.js** — Runtime environment
+* **Express.js** — Web framework
+* **MongoDB** — NoSQL database
+* **Mongoose** — MongoDB ODM
+* **CORS** — Cross-origin resource sharing
+* **dotenv** — Environment configuration
+
+---
 
 ## 📁 Project Structure
 
+```
 vibe-commerce-cart/
 ├── backend/
-│ ├── config/
-│ │ └── db.js # Database connection
-│ ├── models/
-│ │ ├── Product.js # Product schema
-│ │ ├── Cart.js # Cart schema
-│ │ └── Order.js # Order schema
-│ ├── controllers/
-│ │ ├── productController.js # Product business logic
-│ │ ├── cartController.js # Cart business logic
-│ │ └── checkoutController.js # Checkout logic
-│ ├── routes/
-│ │ ├── productRoutes.js # Product API routes
-│ │ ├── cartRoutes.js # Cart API routes
-│ │ └── checkoutRoutes.js # Checkout API routes
-│ ├── server.js # Entry point
-│ ├── .env # Environment variables
-│ └── package.json
+│   ├── config/
+│   │   └── db.js              # Database connection
+│   ├── models/
+│   │   ├── Product.js         # Product schema
+│   │   ├── Cart.js            # Cart schema
+│   │   └── Order.js           # Order schema
+│   ├── controllers/
+│   │   ├── productController.js
+│   │   ├── cartController.js
+│   │   └── checkoutController.js
+│   ├── routes/
+│   │   ├── productRoutes.js
+│   │   ├── cartRoutes.js
+│   │   └── checkoutRoutes.js
+│   ├── server.js              # Backend entry point
+│   ├── .env                   # Environment variables
+│   └── package.json
+│
 ├── frontend/
-│ ├── public/
-│ ├── src/
-│ │ ├── components/
-│ │ │ ├── ProductCard.js # Product display component
-│ │ │ ├── CartItem.js # Cart item component
-│ │ │ ├── CheckoutModal.js # Checkout form modal
-│ │ │ └── ReceiptModal.js # Order confirmation modal
-│ │ ├── pages/
-│ │ │ ├── Products.js # Products listing page
-│ │ │ └── Cart.js # Shopping cart page
-│ │ ├── services/
-│ │ │ └── api.js # API service layer
-│ │ ├── App.js # Main app component
-│ │ ├── index.js # Entry point
-│ │ └── index.css # Tailwind directives
-│ ├── tailwind.config.js # Tailwind configuration
-│ ├── postcss.config.js # PostCSS configuration
-│ └── package.json
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ProductCard.js
+│   │   │   ├── CartItem.js
+│   │   │   ├── CheckoutModal.js
+│   │   │   └── ReceiptModal.js
+│   │   ├── pages/
+│   │   │   ├── Products.js
+│   │   │   └── Cart.js
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── index.css
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   └── package.json
 └── README.md
+```
 
-text
+---
 
 ## 📋 Prerequisites
 
-Before running this project, make sure you have:
+Ensure you have the following installed:
 
-- **Node.js** (v14 or higher) - [Download](https://nodejs.org/)
-- **MongoDB** (v4.4 or higher) - [Download](https://www.mongodb.com/try/download/community)
-- **npm** (comes with Node.js)
-- **Git** - [Download](https://git-scm.com/)
+* **Node.js** ≥ v14 — [Download](https://nodejs.org/)
+* **MongoDB** ≥ v4.4 — [Download](https://www.mongodb.com/try/download/community)
+* **npm** — Comes with Node.js
+* **Git** — [Download](https://git-scm.com/)
+
+---
 
 ## ⚙️ Installation & Setup
 
-### 1. Clone the Repository
+### 1️⃣ Clone the Repository
 
+```bash
 git clone <your-repo-url>
 cd vibe-commerce-cart
+```
 
-text
+### 2️⃣ Backend Setup
 
-### 2. Backend Setup
-
-Navigate to backend directory
+```bash
 cd backend
-
-Install dependencies
 npm install
+```
 
-Create .env file
-cat > .env << 'EOL'
+Create a `.env` file:
+
+```env
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/vibecommerce
-EOL
+```
 
-text
+### 3️⃣ Frontend Setup
 
-### 3. Frontend Setup
-
-Navigate to frontend directory
+```bash
 cd ../frontend
-
-Install dependencies
 npm install
+```
 
-Tailwind CSS is already configured in the project
-text
+> Tailwind CSS is already configured.
+
+---
 
 ## 🚀 Running the Application
 
 ### Start MongoDB
 
-**Windows:**
-- MongoDB runs automatically as a service after installation
+**Windows**
 
-**Mac:**
+```bash
+net start MongoDB
+```
+
+**macOS**
+
+```bash
 brew services start mongodb-community
+```
 
-text
+**Linux**
 
-**Linux:**
+```bash
 sudo systemctl start mongodb
+```
 
-text
+### Start Backend
 
-### Start Backend Server
-
+```bash
 cd backend
 npm run dev
+```
 
-text
+Backend runs on → `http://localhost:5000`
 
-Backend will run on: `http://localhost:5000`
-
-### Start Frontend Development Server
+### Start Frontend
 
 Open a new terminal:
 
+```bash
 cd frontend
 npm start
+```
 
-text
+Frontend runs on → `http://localhost:3000`
 
-Frontend will run on: `http://localhost:3000`
-
-The browser will automatically open to the application.
+---
 
 ## 🔌 API Endpoints
 
-### Products
-- `GET /api/products` - Retrieve all products
-- `POST /api/products/seed` - Seed database with mock products
+### 🧩 Products
 
-### Cart
-- `GET /api/cart` - Get current cart
-- `POST /api/cart` - Add item to cart
-{
-"productId": "string",
-"quantity": number
-}
+| Method | Endpoint             | Description        |
+| ------ | -------------------- | ------------------ |
+| GET    | `/api/products`      | Fetch all products |
+| POST   | `/api/products/seed` | Seed mock products |
 
-text
-- `PUT /api/cart/:id` - Update cart item quantity
-{
-"quantity": number
-}
+### 🛒 Cart
 
-text
-- `DELETE /api/cart/:id` - Remove specific item from cart
-- `DELETE /api/cart` - Clear entire cart
+| Method | Endpoint        | Description     |
+| ------ | --------------- | --------------- |
+| GET    | `/api/cart`     | Get cart items  |
+| POST   | `/api/cart`     | Add item        |
+| PUT    | `/api/cart/:id` | Update quantity |
+| DELETE | `/api/cart/:id` | Remove item     |
+| DELETE | `/api/cart`     | Clear cart      |
 
-### Checkout
-- `POST /api/checkout` - Process checkout and create order
-{
-"customerName": "string",
-"customerEmail": "string",
-"cartItems": []
-}
+### 💳 Checkout
 
-text
+| Method | Endpoint        | Description                     |
+| ------ | --------------- | ------------------------------- |
+| POST   | `/api/checkout` | Process order and create record |
 
-## 💾 Database Schema
+---
+
+## 💾 Database Schemas
 
 ### Product Model
-{
-name: String,
-price: Number,
-description: String,
-image: String,
-category: String,
-stock: Number,
-timestamps: true
-}
 
-text
+```js
+{
+  name: String,
+  price: Number,
+  description: String,
+  image: String,
+  category: String,
+  stock: Number,
+  timestamps: true
+}
+```
 
 ### Cart Model
-{
-userId: String (default: 'guest-user'),
-items: [{
-productId: ObjectId,
-name: String,
-price: Number,
-quantity: Number,
-image: String
-}],
-totalPrice: Number,
-timestamps: true
-}
 
-text
+```js
+{
+  userId: String,
+  items: [
+    { productId: ObjectId, name: String, price: Number, quantity: Number, image: String }
+  ],
+  totalPrice: Number,
+  timestamps: true
+}
+```
 
 ### Order Model
+
+```js
 {
-customerName: String,
-customerEmail: String,
-items: Array,
-totalAmount: Number,
-orderStatus: String,
-orderDate: Date,
-timestamps: true
+  customerName: String,
+  customerEmail: String,
+  items: Array,
+  totalAmount: Number,
+  orderStatus: String,
+  orderDate: Date,
+  timestamps: true
 }
+```
 
-text
+---
 
-## 🎨 Key Features Explained
+## 🎨 Architecture Overview
 
-### Frontend Architecture
-- **Component-based**: Reusable React components with props
-- **Tailwind CSS**: Utility-first styling with custom theme
-- **React Router**: Client-side routing for SPA experience
-- **Axios Service Layer**: Centralized API calls
-- **State Management**: React hooks (useState, useEffect)
-- **Responsive Design**: Mobile-first approach with Tailwind breakpoints
+### Frontend
 
-### Backend Architecture
-- **MVC Pattern**: Separate routes, controllers, and models
-- **RESTful API**: Standard HTTP methods and status codes
-- **Mongoose ODM**: Schema validation and type casting
-- **Error Handling**: Try-catch blocks with user-friendly messages
-- **CORS Enabled**: Frontend-backend communication
+* **Component-based** — Modular and reusable
+* **Tailwind CSS** — Utility-first styling
+* **React Router** — SPA routing
+* **Axios Layer** — Centralized API calls
+* **Hooks** — `useState`, `useEffect` for logic
+* **Responsive UI** — Tailwind breakpoints
+
+### Backend
+
+* **MVC Structure** — Models, Controllers, Routes
+* **RESTful API** — Clear endpoints and status codes
+* **Mongoose ODM** — Schema validation
+* **Error Handling** — Robust responses
+* **CORS Enabled** — Smooth frontend-backend comms
+
+---
 
 ## 📸 Screenshots
 
-### Products Page
-![Products Page](./screenshots/products.png)
-*Browse available products with add to cart functionality*
+| Page               | Preview                                 | Description                  |
+| ------------------ | --------------------------------------- | ---------------------------- |
+| **Products Page**  | ![Products](./screenshots/products.png) | Browse and add items to cart |
+| **Shopping Cart**  | ![Cart](./screenshots/cart.png)         | Manage items and quantities  |
+| **Checkout Modal** | ![Checkout](./screenshots/checkout.png) | Submit customer info         |
+| **Order Receipt**  | ![Receipt](./screenshots/receipt.png)   | View order confirmation      |
 
-### Shopping Cart
-![Shopping Cart](./screenshots/cart.png)
-*View and manage cart items with quantity controls*
+---
 
-### Checkout Modal
-![Checkout Modal](./screenshots/checkout.png)
-*Enter customer information for order processing*
+## 🧪 Testing the App
 
-### Order Receipt
-![Order Receipt](./screenshots/receipt.png)
-*Order confirmation with receipt details*
+1. View product grid on home page
+2. Add product(s) to cart
+3. Open cart to view items
+4. Adjust quantities or remove items
+5. Proceed to checkout and submit form
+6. View order receipt modal
 
-## 🧪 Testing
-
-### Test the Application
-
-1. **View Products**: Navigate to home page to see product grid
-2. **Add to Cart**: Click "Add to Cart" on any product
-3. **View Cart**: Click cart icon in navigation
-4. **Update Quantity**: Use +/- buttons to adjust quantities
-5. **Remove Items**: Click X button to remove items
-6. **Checkout**: Click "Proceed to Checkout"
-7. **Complete Order**: Fill form and submit
-8. **View Receipt**: See order confirmation modal
+---
 
 ## 🐛 Troubleshooting
 
 ### Port Already in Use
-Kill process on port 3000
+
+```bash
 npx kill-port 3000
-
-Or use different port
 set PORT=3001 && npm start
-
-text
+```
 
 ### MongoDB Connection Error
-Check if MongoDB is running
-mongo --version
 
-Start MongoDB service
-Windows: Check Services app
-Mac: brew services start mongodb-community
-Linux: sudo systemctl start mongodb
-text
+```bash
+mongo --version
+net start MongoDB
+```
 
 ### Tailwind CSS Not Working
-Clear cache and restart
+
+```bash
 rm -rf node_modules/.cache
 npm start
+```
 
-Hard refresh browser: Ctrl + Shift + R
-text
+Then hard refresh browser (**Ctrl + Shift + R**)
 
 ### npm install Fails
-Clear npm cache
-npm cache clean --force
 
-Delete and reinstall
+```bash
+npm cache clean --force
 rm -rf node_modules package-lock.json
 npm install
-
-text
-
-## 🔮 Future Enhancements
-
-- [ ] User authentication (JWT tokens)
-- [ ] Multiple user cart support
-- [ ] Payment gateway integration (Stripe/PayPal)
-- [ ] Product search and filtering
-- [ ] Category-based browsing
-- [ ] Product reviews and ratings
-- [ ] Wishlist functionality
-- [ ] Order history page
-- [ ] Admin dashboard
-- [ ] Email notifications
-- [ ] Image upload for products
-- [ ] Inventory management
-- [ ] Discount codes/coupons
-- [ ] Shipping calculator
-
-## 🤝 Contributing
-
-This is a screening assignment project. For educational purposes only.
-
-## 📝 License
-
-MIT License - feel free to use this project for learning purposes.
-
-## 👨‍💻 Author
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-
-## 🙏 Acknowledgments
-
-- Vibe Commerce for the assignment opportunity
-- React and Tailwind CSS communities
-- MongoDB documentation
-- Express.js framework
+```
 
 ---
 
-**Built with ❤️ for Vibe Commerce Screening Assignment
+## 🔮 Future Enhancements
+
+* [ ] JWT-based user authentication
+* [ ] Multi-user cart support
+* [ ] Stripe/PayPal integration
+* [ ] Product filtering and search
+* [ ] Category browsing
+* [ ] Reviews and ratings
+* [ ] Wishlist functionality
+* [ ] Order history page
+* [ ] Admin dashboard
+* [ ] Email notifications
+* [ ] Product image uploads
+* [ ] Discount codes / coupons
+* [ ] Inventory management
+
+---
+
+## 🤝 Contributing
+
+This project was built as part of the **Vibe Commerce Screening Assignment**.
+Feel free to use it for learning or extend it with new features.
+
+---
+
+
+
+---
+
+## 👨‍💻 Author
+
+**Vishwanath Nishad**
+
+* GitHub: [@vishu1803](https://github.com/vishu1803)
+* Email: [your.email@example.com](mailto:your.email@example.com)
+
+---
+
+## 🙏 Acknowledgments
+
+* Vibe Commerce for the assignment
+* React & Tailwind CSS communities
+* MongoDB and Express.js docs
+
+---
+
+**Built with ❤️ by Vishwanath Nishad for the Vibe Commerce Screening Assignment**
+
+---
+
+
