@@ -1,10 +1,16 @@
 
-
 ---
 
-# 🛍️ Vibe Commerce - Shopping Cart Application
+# 🛍️ Vibe Commerce – Shopping Cart Application
 
-A full-stack e-commerce shopping cart application built with **React**, **Express**, **MongoDB**, and **Tailwind CSS** for the **Vibe Commerce** screening assignment.
+![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react\&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-6.x-purple?logo=vite\&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express-green?logo=node.js\&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.x-darkgreen?logo=mongodb\&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.1-06B6D4?logo=tailwindcss\&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+A modern **full-stack e-commerce shopping cart** application built with **React + Vite**, **Express**, **MongoDB**, and **Tailwind CSS** for the **Vibe Commerce** screening assignment.
 
 ---
 
@@ -15,7 +21,7 @@ A full-stack e-commerce shopping cart application built with **React**, **Expres
 * 💾 **Persistent Storage** — Cart data saved in MongoDB
 * 💳 **Mock Checkout** — Complete purchase flow with form submission
 * 🧾 **Order Confirmation** — Receipt modal with order details
-* 📱 **Responsive Design** — Fully responsive UI with Tailwind CSS
+* 📱 **Responsive Design** — Mobile-friendly UI using Tailwind CSS
 * ⚡ **Real-time Updates** — Live cart count in navigation
 * 🛠️ **Error Handling** — Comprehensive messages and loading states
 
@@ -25,20 +31,20 @@ A full-stack e-commerce shopping cart application built with **React**, **Expres
 
 ### Frontend
 
-* **React** 18.2.0 — UI library
-* **React Router DOM** 6.20.0 — Client-side routing
-* **Tailwind CSS** 3.4.1 — Utility-first CSS framework
-* **Axios** 1.6.0 — HTTP client
-* **PostCSS & Autoprefixer** — CSS post-processing
+* **Vite** 6.x – Next-gen build tool for React
+* **React** 18.2.0 – Component-based UI library
+* **React Router DOM** 6.20.0 – SPA routing
+* **Tailwind CSS** 3.4.1 – Utility-first styling
+* **Axios** 1.6.0 – HTTP client
+* **PostCSS & Autoprefixer** – CSS processing
 
 ### Backend
 
-* **Node.js** — Runtime environment
-* **Express.js** — Web framework
-* **MongoDB** — NoSQL database
-* **Mongoose** — MongoDB ODM
-* **CORS** — Cross-origin resource sharing
-* **dotenv** — Environment configuration
+* **Node.js** – Runtime environment
+* **Express.js** – Web framework
+* **MongoDB + Mongoose** – Database & ODM
+* **CORS** – Cross-origin resource sharing
+* **dotenv** – Environment configuration
 
 ---
 
@@ -48,11 +54,11 @@ A full-stack e-commerce shopping cart application built with **React**, **Expres
 vibe-commerce-cart/
 ├── backend/
 │   ├── config/
-│   │   └── db.js              # Database connection
+│   │   └── db.js
 │   ├── models/
-│   │   ├── Product.js         # Product schema
-│   │   ├── Cart.js            # Cart schema
-│   │   └── Order.js           # Order schema
+│   │   ├── Product.js
+│   │   ├── Cart.js
+│   │   └── Order.js
 │   ├── controllers/
 │   │   ├── productController.js
 │   │   ├── cartController.js
@@ -61,26 +67,27 @@ vibe-commerce-cart/
 │   │   ├── productRoutes.js
 │   │   ├── cartRoutes.js
 │   │   └── checkoutRoutes.js
-│   ├── server.js              # Backend entry point
-│   ├── .env                   # Environment variables
+│   ├── server.js
+│   ├── .env
 │   └── package.json
 │
 ├── frontend/
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── ProductCard.js
-│   │   │   ├── CartItem.js
-│   │   │   ├── CheckoutModal.js
-│   │   │   └── ReceiptModal.js
+│   │   │   ├── ProductCard.jsx
+│   │   │   ├── CartItem.jsx
+│   │   │   ├── CheckoutModal.jsx
+│   │   │   └── ReceiptModal.jsx
 │   │   ├── pages/
-│   │   │   ├── Products.js
-│   │   │   └── Cart.js
+│   │   │   ├── Products.jsx
+│   │   │   └── Cart.jsx
 │   │   ├── services/
 │   │   │   └── api.js
-│   │   ├── App.js
-│   │   ├── index.js
+│   │   ├── App.jsx
+│   │   ├── main.jsx
 │   │   └── index.css
+│   ├── vite.config.js
 │   ├── tailwind.config.js
 │   ├── postcss.config.js
 │   └── package.json
@@ -91,12 +98,10 @@ vibe-commerce-cart/
 
 ## 📋 Prerequisites
 
-Ensure you have the following installed:
-
-* **Node.js** ≥ v14 — [Download](https://nodejs.org/)
-* **MongoDB** ≥ v4.4 — [Download](https://www.mongodb.com/try/download/community)
-* **npm** — Comes with Node.js
-* **Git** — [Download](https://git-scm.com/)
+* **Node.js ≥ v16** – [Download](https://nodejs.org/)
+* **MongoDB ≥ v4.4** – [Download](https://www.mongodb.com/try/download/community)
+* **npm / yarn**
+* **Git** – [Download](https://git-scm.com/)
 
 ---
 
@@ -116,21 +121,21 @@ cd backend
 npm install
 ```
 
-Create a `.env` file:
+Create `.env` file:
 
 ```env
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/vibecommerce
 ```
 
-### 3️⃣ Frontend Setup
+### 3️⃣ Frontend Setup (Vite + React)
 
 ```bash
 cd ../frontend
 npm install
 ```
 
-> Tailwind CSS is already configured.
+> Tailwind CSS is already configured for Vite.
 
 ---
 
@@ -163,18 +168,16 @@ cd backend
 npm run dev
 ```
 
-Backend runs on → `http://localhost:5000`
+→ Backend runs on `http://localhost:5000`
 
-### Start Frontend
-
-Open a new terminal:
+### Start Frontend (Vite)
 
 ```bash
 cd frontend
-npm start
+npm run dev
 ```
 
-Frontend runs on → `http://localhost:3000`
+→ Frontend runs on `http://localhost:5173`
 
 ---
 
@@ -207,45 +210,22 @@ Frontend runs on → `http://localhost:3000`
 
 ## 💾 Database Schemas
 
-### Product Model
+**Product**
 
 ```js
-{
-  name: String,
-  price: Number,
-  description: String,
-  image: String,
-  category: String,
-  stock: Number,
-  timestamps: true
-}
+{ name, price, description, image, category, stock, timestamps: true }
 ```
 
-### Cart Model
+**Cart**
 
 ```js
-{
-  userId: String,
-  items: [
-    { productId: ObjectId, name: String, price: Number, quantity: Number, image: String }
-  ],
-  totalPrice: Number,
-  timestamps: true
-}
+{ userId, items: [{ productId, name, price, quantity, image }], totalPrice, timestamps: true }
 ```
 
-### Order Model
+**Order**
 
 ```js
-{
-  customerName: String,
-  customerEmail: String,
-  items: Array,
-  totalAmount: Number,
-  orderStatus: String,
-  orderDate: Date,
-  timestamps: true
-}
+{ customerName, customerEmail, items, totalAmount, orderStatus, orderDate, timestamps: true }
 ```
 
 ---
@@ -254,20 +234,19 @@ Frontend runs on → `http://localhost:3000`
 
 ### Frontend
 
-* **Component-based** — Modular and reusable
-* **Tailwind CSS** — Utility-first styling
-* **React Router** — SPA routing
-* **Axios Layer** — Centralized API calls
-* **Hooks** — `useState`, `useEffect` for logic
-* **Responsive UI** — Tailwind breakpoints
+* **Vite + React** — lightning-fast builds
+* **Tailwind CSS** — modern responsive UI
+* **React Router** — SPA navigation
+* **Axios API Layer** — centralized requests
+* **Hooks (`useState`, `useEffect`)** — state management
 
 ### Backend
 
-* **MVC Structure** — Models, Controllers, Routes
-* **RESTful API** — Clear endpoints and status codes
-* **Mongoose ODM** — Schema validation
-* **Error Handling** — Robust responses
-* **CORS Enabled** — Smooth frontend-backend comms
+* **MVC Pattern** — separation of concerns
+* **RESTful API** — clear endpoints
+* **Mongoose ODM** — schema validation
+* **CORS Enabled** — smooth communication
+* **Error Handling** — structured responses
 
 ---
 
@@ -295,30 +274,30 @@ Frontend runs on → `http://localhost:3000`
 
 ## 🐛 Troubleshooting
 
-### Port Already in Use
+**Port Already in Use**
 
 ```bash
-npx kill-port 3000
-set PORT=3001 && npm start
+npx kill-port 5173
+npm run dev -- --port=5174
 ```
 
-### MongoDB Connection Error
+**MongoDB Connection Error**
 
 ```bash
 mongo --version
 net start MongoDB
 ```
 
-### Tailwind CSS Not Working
+**Tailwind CSS Not Working**
 
 ```bash
 rm -rf node_modules/.cache
-npm start
+npm run dev
 ```
 
-Then hard refresh browser (**Ctrl + Shift + R**)
+→ Then hard-refresh browser (**Ctrl + Shift + R**)
 
-### npm install Fails
+**npm install Fails**
 
 ```bash
 npm cache clean --force
@@ -330,30 +309,32 @@ npm install
 
 ## 🔮 Future Enhancements
 
-* [ ] JWT-based user authentication
-* [ ] Multi-user cart support
-* [ ] Stripe/PayPal integration
-* [ ] Product filtering and search
-* [ ] Category browsing
-* [ ] Reviews and ratings
-* [ ] Wishlist functionality
-* [ ] Order history page
-* [ ] Admin dashboard
-* [ ] Email notifications
-* [ ] Product image uploads
-* [ ] Discount codes / coupons
-* [ ] Inventory management
+* [ ] JWT Authentication
+* [ ] Multi-User Cart Support
+* [ ] Stripe / PayPal Integration
+* [ ] Product Filtering & Search
+* [ ] Category Browsing
+* [ ] Reviews & Ratings
+* [ ] Wishlist Functionality
+* [ ] Order History Page
+* [ ] Admin Dashboard
+* [ ] Email Notifications
+* [ ] Product Image Uploads
+* [ ] Discount Codes / Coupons
+* [ ] Inventory Management
 
 ---
 
 ## 🤝 Contributing
 
-This project was built as part of the **Vibe Commerce Screening Assignment**.
-Feel free to use it for learning or extend it with new features.
+This project was created for the **Vibe Commerce Screening Assignment**.
+You’re welcome to fork or extend it for learning purposes.
 
 ---
 
+## 📝 License
 
+Released under the **MIT License** — free for personal & educational use.
 
 ---
 
@@ -361,20 +342,20 @@ Feel free to use it for learning or extend it with new features.
 
 **Vishwanath Nishad**
 
-* GitHub: [@vishu1803](https://github.com/vishu1803)
-* Email: [your.email@example.com](mailto:your.email@example.com)
+* GitHub → [@vishu1803](https://github.com/vishu1803)
+* Email → [your.email@example.com](mailto:your.email@example.com)
 
 ---
 
 ## 🙏 Acknowledgments
 
 * Vibe Commerce for the assignment
-* React & Tailwind CSS communities
-* MongoDB and Express.js docs
+* React, Vite & Tailwind CSS communities
+* MongoDB & Express documentation
 
 ---
 
-**Built with ❤️ by Vishwanath Nishad for the Vibe Commerce Screening Assignment**
+**Built with ⚡ Vite + ❤️ by Vishwanath Nishad for the Vibe Commerce Screening Assignment**
 
 ---
 
