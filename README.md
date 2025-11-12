@@ -8,7 +8,7 @@
 ![Node.js](https://img.shields.io/badge/Node.js-Express-green?logo=node.js\&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-6.x-darkgreen?logo=mongodb\&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.1-06B6D4?logo=tailwindcss\&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+
 
 A modern **full-stack e-commerce shopping cart** application built with **React + Vite**, **Express**, **MongoDB**, and **Tailwind CSS** for the **Vibe Commerce** screening assignment.
 
